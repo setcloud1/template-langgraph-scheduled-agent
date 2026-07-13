@@ -1,0 +1,5 @@
+This template integrates LangChain.js and LangGraph.js, maintained by LangChain.
+Those dependencies are distributed under the MIT License. Their source is at
+https://github.com/langchain-ai/langchainjs.
+
+This repository is SetCloud-authored and is not endorsed by LangChain.

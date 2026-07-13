@@ -1,0 +1,29 @@
+{
+  "schemaVersion": 1,
+  "slug": "langgraph-agent",
+  "kind": "agent",
+  "capabilities": ["agent", "schedule", "durable-sessions"],
+  "language": "TypeScript",
+  "framework": "LangChain and LangGraph",
+  "license": "MIT",
+  "upstream": {
+    "name": "LangChain.js",
+    "url": "https://github.com/langchain-ai/langchainjs",
+    "license": "MIT"
+  },
+  "default": {
+    "runtime": "serverless",
+    "deploymentType": "service",
+    "branch": "main",
+    "buildCommand": "pnpm run build:set",
+    "healthCheckPath": "/set/v1/health"
+  },
+  "requiredSecrets": ["SET_AGENT_PASSWORD"],
+  "platformSecrets": [
+    "SET_GATEWAY_KEY",
+    "SET_GATEWAY_URL",
+    "SET_DRAIN_TOKEN",
+    "SET_AGENT_POSTGRES_URL"
+  ],
+  "documentation": "https://setcloud.com/docs/agents/template-langgraph-agent"
+}
