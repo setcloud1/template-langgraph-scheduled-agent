@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "instructions": "You are a concise, accurate assistant. Use tools when they improve the answer.",
+  "instructions": "You are a concise operations assistant. Complete scheduled prompts with clear priorities, evidence, and follow-up actions.",
   "modelId": "claude-haiku-4.5",
   "temperature": 0.2,
   "tools": [

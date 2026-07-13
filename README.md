@@ -1,14 +1,15 @@
-# SetCloud LangGraph agent template
+# SetCloud LangGraph scheduled agent
 
-A SetCloud-maintained TypeScript agent built on LangChain's production agent
-API and LangGraph runtime. It deploys on SetCloud's serverless agent runtime,
-uses the SetCloud AI Gateway, persists LangGraph checkpoints in the managed
-agent database, and publishes repository-backed schedules.
+A SetCloud-maintained TypeScript starter for recurring agent automations. It is
+built on LangChain's production agent API and LangGraph runtime, deploys on
+SetCloud's serverless agent runtime, uses the SetCloud AI Gateway, persists
+LangGraph checkpoints in the managed agent database, and publishes schedules
+from source-controlled Markdown files.
 
 ## Create the agent
 
 In the SetCloud dashboard, open **Agents**, choose **Templates**, and clone the
-**LangGraph Agent** template into your GitHub account. Before the first deploy,
+**LangGraph Scheduled Agent** template into your GitHub account. Before the first deploy,
 create a secret named `SET_AGENT_PASSWORD` and link it to the project. The
 message endpoint rejects every request until that secret exists.
 
@@ -32,11 +33,14 @@ default model, instructions, temperature, tools, knowledge sources, and enabled
 triggers. Environment variables remain deployment-level overrides for the model
 and instructions.
 
-## Automations
+## Scheduled automations
 
 Markdown files in `agent/schedules` become scheduled automations. The dashboard
 edits the same files and commits changes to your repository. Each file needs a
 five-field cron expression in front matter and the prompt as its body.
+
+The included `daily-summary` automation runs at 09:00 UTC every weekday. Edit
+its cron expression and prompt before deploying it for production use.
 
 ## Local verification
 

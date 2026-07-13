@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "slug": "langgraph-agent",
+  "slug": "langgraph-scheduled-agent",
   "kind": "agent",
   "capabilities": ["agent", "schedule", "durable-sessions"],
   "language": "TypeScript",
@@ -25,5 +25,5 @@
     "SET_DRAIN_TOKEN",
     "SET_AGENT_POSTGRES_URL"
   ],
-  "documentation": "https://setcloud.com/docs/agents/template-langgraph-agent"
+  "documentation": "https://setcloud.com/docs/agents/template-langgraph-scheduled-agent"
 }

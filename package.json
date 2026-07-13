@@ -1,5 +1,5 @@
 {
-  "name": "setcloud-langgraph-agent-template",
+  "name": "setcloud-langgraph-scheduled-agent-template",
   "version": "1.0.0",
   "private": true,
   "type": "module",
